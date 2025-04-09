@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,77 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 16px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.result, .history {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+.history-item {
+  margin-bottom: 1rem;
+}
+
+.top-results {
+  margin-top: 1rem;
+  background: #eef6ff;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.top-results ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.top-results li {
+  margin: 0.5rem 0;
+}
+
+.top-results a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.top-results a:hover {
+  text-decoration: underline;
 }
