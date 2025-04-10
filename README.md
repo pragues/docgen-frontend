@@ -1,6 +1,6 @@
 # My modification
 
-Modified App.css and App.js for he docgen frontend. 
+Modified App.css and App.js for the docgen frontend. 
 
 # Getting Started with Create React App
 
