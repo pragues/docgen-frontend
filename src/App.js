@@ -38,34 +38,34 @@ function App() {
 
   return (
     <div className="container">
-      <h1>📚 GitHub 代码文档生成器</h1>
+      <h1> GitHub code summary generator</h1>
       <div className="search-box">
         <input
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
-          placeholder="输入关键词，例如：quick sort"
+          placeholder="Input keyword or code e.g.: quick sort"
         />
-        <button onClick={handleSearch}>生成文档</button>
+        <button onClick={handleSearch}> Search and Generate</button>
       </div>
 
-      {loading && <p>加载中...</p>}
+      {loading && <p>loading...</p>}
 
 
 
       {result && (
         <div className="result">
-          <h3>🔎 关键词：{result.keyword}</h3>
-          <p><strong>代码路径：</strong> <a href={result.url} target="_blank" rel="noreferrer">{result.url}</a></p>
+          <h3> Keyword：{result.keyword}</h3>
+          <p><strong>Code path: </strong> <a href={result.url} target="_blank" rel="noreferrer">{result.url}</a></p>
 
-          <p><strong>原始代码：</strong></p>
+          <p><strong>Original code: </strong></p>
           <pre>{result.code}</pre>
 
-          <p><strong>文档说明：</strong></p>
+          <p><strong>Generated Summary</strong></p>
           <pre>{result.explanation}</pre>
 
           {result.topResults && result.topResults.length > 0 && (
             <div className="top-results">
-              <h4>📂 GitHub 搜索结果前 10 项：</h4>
+              <h4>📂 GitHub top 10 search result: </h4>
               <ul>
                 {result.topResults.map((item, index) => (
                   <li key={index}>
@@ -82,12 +82,12 @@ function App() {
 
 
       <div className="history">
-        <h2>📜 历史记录</h2>
+        <h2>📜 Search History</h2>
         {history.map((item) => (
           <div className="history-item" key={item.id}>
             <strong>{item.keyword}</strong>({new Date(item.timestamp).toLocaleString()})
             <details>
-              <summary>展开查看</summary>
+              <summary>Display</summary>
               <pre>{item.codeSnippet}</pre>
               <pre>{item.explanation}</pre>
             </details>
